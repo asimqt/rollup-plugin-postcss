@@ -124,6 +124,18 @@ Default: `false`
 
 Enable CSS modules or set options for `postcss-modules`.
 
+For example, if you want to edit the class naming convention from `[name]_[local]__[hash:base64:5]` to maybe `[name]__[local]__[hash:base64:5]`, you can try:
+
+```
+plugins: [
+  ...
+  modules: {
+    generateScopedName: "[name]__[local]__[hash:base64:5]"
+  }
+  ...
+]
+```
+
 ### autoModules
 
 Type: `boolean`<br>
